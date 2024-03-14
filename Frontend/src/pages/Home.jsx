@@ -15,6 +15,7 @@ import About from "../components/about/About";
 import ServiceList from "../components/services/ServiceList";
 import DoctorList from "../components/Doctors/DoctorList";
 import FaqList from "../components/Faq/FaqList";
+// import TestimonialList from "../components/Testimonial/TestimonialList";
 
 const Home = () => {
   return (
@@ -282,6 +283,7 @@ const Home = () => {
               unmatched expert health services
             </p>
           </div>
+          {/* <TestimonialList /> */}
         </div>
       </section>
       {/* ====testimonial end==== */}
