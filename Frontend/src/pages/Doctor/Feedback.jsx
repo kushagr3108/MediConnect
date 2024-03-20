@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import avatar from "../../assets/images/avatar-icon.png";
 import { formateDate } from '../../utils/formateDate';
-import {AiFillStar} from "react-icons/ai"
+import {AiFillStar} from "react-icons/ai";
+import FeedbackForm from './FeedbackForm';
+
 
 const Feedback = () => {
+    const [showFeedbackForm, setShowFeedbackForm] = useState(false)
   return (
     <div>
         <div className="mb-[50px]">
@@ -30,10 +33,15 @@ const Feedback = () => {
                     </div>
                 </div>
                 <div className="flex gap-1">
-                    {[...Array(5).keys()].map((_, index) => <AiFillStar key={index} color="#0067FF" />)}
+                    {[...Array(5).keys()].map((_, index) => (<AiFillStar key={index} color="#0067FF" />))}
                 </div>
             </div>
         </div>
+         {!showFeedbackForm && <div className="text-center">
+            <button className='btn' onClick={() => setShowFeedbackForm(true)}>Give feedback</button>
+        </div> }
+
+        {showFeedbackForm && <FeedbackForm />}
     </div>
   )
 }
