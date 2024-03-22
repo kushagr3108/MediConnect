@@ -28,6 +28,7 @@ const Signup = () => {
   }
 
   const submitHandler = async event => {
+     console.log(formData)
     event.preventDefault()
   }
 
